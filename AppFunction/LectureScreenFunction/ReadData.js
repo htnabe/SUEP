@@ -6,10 +6,8 @@ export default async function loadData(itemKey) {
     let loadedData = await AsyncStorage.getItem(itemKey);
     loadedData = JSON.stringify(loadedData);
     if (loadedData != null) {
-      console.log('ファイル名：readData.js\n' + '読み込み成功\n');
       return loadedData;
     } else {
-      console.log('ファイル名：readData.js\n' + '呼び出す値がありません\n');
       return "";
     }
   } catch (error) {
