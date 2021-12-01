@@ -11,5 +11,7 @@ export default async function loadData(itemKey) {
       return "";
     }
   } catch (error) {
+    Sentry.Native.captureException(error);
+    console.log('ファイル名：readData.js\n' + 'エラー：' + error + '\n');
   }
 }

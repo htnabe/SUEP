@@ -59,5 +59,7 @@ export default async function deleteDuplicateLecture(selectedLectures) {
     }
     return JSON.stringify(registeredValue);
   } catch (error) {
+    Sentry.Native.captureException(error);
+    console.log('ファイル名：releteDuplicateLecture.js\n' + 'エラー内容' + error + '\n');
   }
 }
