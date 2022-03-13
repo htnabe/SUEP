@@ -128,9 +128,6 @@ async function loadLectureJSONFiles(lectureFileName) {
     return data;
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log(
-      'エラー箇所: seachLecture.js / loadLectureJSONFiles\n' + error + '\n'
-    );
   }
 }
 
@@ -184,7 +181,6 @@ const searchLecture = async (inputedKeyWord) => {
     return lectureData;
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log('ファイル名: SearchLecture.js\n' + error + '\n');
   }
 };
 

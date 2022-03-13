@@ -12,8 +12,5 @@ export default async function separateTableAndLectureData(allLectureData) {
     return [tableLectureData, otherLectureData];
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log(
-      'separateTableAndLectureData.js\n' + 'エラー内容：' + error + '\n'
-    );
   }
 }

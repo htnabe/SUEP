@@ -44,7 +44,6 @@ const storeAffiliation = (facultyName) => {
     }
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log('ファイル名:storeAffiliation.js\n' + error + '\n');
   }
 };
 
