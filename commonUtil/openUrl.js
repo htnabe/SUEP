@@ -6,7 +6,7 @@ const openUrl = async (url, enableCancel) => {
     await Linking.openURL(url);
   } else {
     const isCanselable = enableCancel ? true : false;
-    Alert.alert('エラー', 'このページを開ませんでした', [{ text: 'OK' }], {
+    Alert.alert('エラー', 'このページを開ませんでした.', [{ text: 'OK' }], {
       cancelable: isCanselable,
     });
   }
