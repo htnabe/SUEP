@@ -1,5 +1,5 @@
-import openUrl from './../../../commonUtil/openUrl';
 import { Alert } from 'react-native';
+import openUrl from './../../commonUtil/openUrl';
 
 const forceUpdate = () => {
   const url = 'https://play.google.com/store/apps/details?id=com.tpot.suepapp';

@@ -302,7 +302,7 @@ export default function homeScreenProp() {
             value={inputedKeyWord}
             placeholder="授業科目検索"
             onTapIcon={() => {
-              setinputedLectureInfo('');
+              navigation.navigate('検索結果', { keyWord: inputedKeyWord });
             }}
             style={styles.extraSearchBarStyle}
             iconType={'search'}

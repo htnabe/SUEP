@@ -5,6 +5,9 @@ const commonStyles = StyleSheet.create({
     padding: 10,
     flex: 1,
   },
+  centeredView: {
+    justifyContent: 'center',
+  },
   xLargeFont: {
     fontSize: 20,
   },
