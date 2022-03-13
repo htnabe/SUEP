@@ -10,6 +10,7 @@ import ModalToChangeBelongs from './ModalToChangeBelongs';
 import { ShowModalContext } from './ShowModalContext';
 import storeArrayData from './../../../commonUtil/storeArrayData';
 import readArrayData from './../../../commonUtil/readArrayData';
+import removeStoredData from '../../../commonUtil/removeStoredData';
 import CustomedSearchBar from './../../../commonComponent/CustomedSearchBar';
 import CustomedButton from '../../../commonComponent/CustomedButton';
 import commonStyles from '../../../commonStyle/commonStyle';
@@ -237,34 +238,46 @@ export default function homeScreenProp() {
     storeArrayData('plainTableDataKey', tablePlainData);
   }
 
+  function deleteSchedule(data) {
+    const id = data.map((item) => item.時間割コード);
+    id.map(removeStoredData);
+  }
+
   async function deleteSelectedLectures() {
     if (numberOfLecturesDeleted > 0) {
       // その他の講義の削除
-      const selectedOthers = otherLecsData.filter((item) => !item.selected);
-      setOtherLecsData(selectedOthers);
+      const unselectedOtherData = otherLecsData.filter(
+        (item) => !item.selected
+      );
+      const selectedOtherData = otherLecsData.filter((item) => item.selected);
+      setOtherLecsData(unselectedOtherData);
 
       // 時間割表用の素のデータから削除
       const selectedLectureInfo = tableData.filter((item) => item.selected);
       deleteDataFromPlainTableData(selectedLectureInfo);
 
+      // 関連するスケジュールの削除
+      if (selectedOtherData) deleteSchedule(selectedOtherData);
+      if (selectedLectureInfo) deleteSchedule(selectedLectureInfo);
+
       // 時間割表用データから削除
-      let selectedTableLecture = tableData;
-      selectedTableLecture.filter((item, index) => {
+      let remainedData = tableData;
+      remainedData.filter((item, index) => {
         if (item.selected == true) {
-          selectedTableLecture[index] = {};
+          remainedData[index] = {};
         }
       });
-      setTableData(selectedTableLecture);
+      setTableData(remainedData);
 
       // 削除後のデータの保存
       const keyValueSet = [
         {
           key: 'formattedTableDataKey',
-          value: selectedTableLecture,
+          value: remainedData,
         },
         {
           key: 'otherLectureKey',
-          value: selectedOthers,
+          value: unselectedOtherData,
         },
       ];
       await Promise.all(
