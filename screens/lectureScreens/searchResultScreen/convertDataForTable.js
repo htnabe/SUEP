@@ -112,6 +112,5 @@ export default async function ConvertDataForTableScreen(
     }
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log('ファイル名: ConvertDataForTableScreen.js\n' + error + '\n');
   }
 }

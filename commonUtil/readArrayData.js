@@ -12,7 +12,6 @@ const readArrayData = async (key) => {
     }
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log('ファイル名:GetStoredData.js' + error);
   }
 };
 
