@@ -82,7 +82,6 @@ async function loadSecondSemisterFile(fileName) {
     return data;
   } catch (error) {
     Sentry.Native.captureException(error);
-        console.log('エラー箇所: loadSecondSemisterFile.js\n' + error + '\n');
   }
 }
 

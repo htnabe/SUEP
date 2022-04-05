@@ -107,7 +107,6 @@ const searchLecture = async (inputedKeyWord) => {
     return lectureData;
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log('ファイル名: SearchLecture.js\n' + error + '\n');
   }
 };
 
