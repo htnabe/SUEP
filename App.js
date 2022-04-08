@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { FontAwesome5 } from '@expo/vector-icons';
 import * as Sentry from 'sentry-expo';
-import { View} from 'react-native';
+import { View } from 'react-native';
 
 // 外部関数のインポート
 import About from './screens/otherScreens/About';
