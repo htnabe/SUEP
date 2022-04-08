@@ -78,7 +78,6 @@ export default function homeScreenProp() {
       }
     } catch (error) {
       Sentry.Native.captureException(error);
-      console.log('関数名:setTableAndOtherLecture\n' + error + '\n');
     }
   }
 

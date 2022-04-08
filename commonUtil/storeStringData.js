@@ -6,7 +6,6 @@ const saveData = async (key, value) => {
     await AsyncStorage.setItem(key, value);
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log('ファイル名: saveData.js' + error + '\n');
   }
 };
 

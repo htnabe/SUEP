@@ -13,7 +13,6 @@ const readStringData = async (key) => {
     }
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log('ファイル名: readStringData.js\n' + error + '\n');
   }
 };
 

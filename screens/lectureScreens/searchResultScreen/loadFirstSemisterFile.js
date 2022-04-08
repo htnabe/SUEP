@@ -51,9 +51,6 @@ function loadFirstSemisterFile(fileName) {
     return data;
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log(
-      'エラー箇所: loadFirstSemisterFile.js\n' + error + '\n'
-    );
   }
 }
 
