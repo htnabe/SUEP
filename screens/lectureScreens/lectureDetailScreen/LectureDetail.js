@@ -172,12 +172,10 @@ export default function LectureDetail({ navigation }) {
     if (taskInfo) {
       arg = taskInfo;
       arg.filter((task) => (task.checked = false));
-      console.log('taskDataが渡った');
       if (taskInfo.length == 1) {
         arg[0].isFirstData = false;
         arg[0].isSecendData = true;
       } else if (taskInfo.length == 0) {
-        console.log('taskInfoの長さ0\n');
         arg = [
           {
             id: lectureNumber,
@@ -190,9 +188,7 @@ export default function LectureDetail({ navigation }) {
           },
         ];
       }
-      console.log('中身は:' + JSON.stringify(arg) + '\n');
     } else {
-      console.log('argが渡った');
       arg = [
         {
           id: lectureNumber,

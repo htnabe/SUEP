@@ -102,11 +102,5 @@ export default async function CombineCurrentDataWithSelectedData(
     return combinedData;
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log(
-      'ファイル名: CombineTableDataWithSelectedData.js\n' +
-        'エラー内容' +
-        error +
-        '\n'
-    );
   }
 }
