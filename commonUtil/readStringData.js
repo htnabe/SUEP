@@ -5,10 +5,8 @@ const readStringData = async (key) => {
   try {
     let loadedData = await AsyncStorage.getItem(key);
     if (loadedData != null) {
-      console.log('キー ' + key + ' は値を持っています。' + '\n');
       return loadedData;
     } else {
-      console.log('キー ' + key + ' は値を持っていません。' + '\n');
       return '';
     }
   } catch (error) {
