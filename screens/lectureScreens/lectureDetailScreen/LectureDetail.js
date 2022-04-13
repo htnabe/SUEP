@@ -53,7 +53,7 @@ function changePlaceName(room, building) {
   ) {
     return building;
   } else {
-    return '未定またはオンライン講義です';
+    return '情報が反映されてないかオンライン講義です';
   }
 }
 
