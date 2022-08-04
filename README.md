@@ -31,4 +31,4 @@
 - `develop`: 開発環境
 - `release`: リリース調整用の環境
 
-開発規則として**iOS, Android両方で利用できるモジュールを用いる**ように注意して下さい。
+開発について気になる方は[開発規則](https://suep.netlify.app/post/regulationofcontribution/)と[開発ブログ](https://suep.netlify.app/post/regulationofcontribution/)を読んでみてください。
