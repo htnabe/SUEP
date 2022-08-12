@@ -37,7 +37,6 @@ const fetchTweetData = async (sheetName) => {
     return Data;
   } catch (error) {
     Sentry.Native.captureException(error);
-    console.log(error);
   }
 };
 
