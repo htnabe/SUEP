@@ -1,3 +1,4 @@
+# Items to ignore by default
 node_modules/**/*
 .expo/*
 npm-debug.*
@@ -8,7 +9,14 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+
+# env variables
 .env
+
+# Items to be created by Development build
+android/
+index.js
+metro.config.js
 
 # macOS
 .DS_Store
