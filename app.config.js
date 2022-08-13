@@ -3,7 +3,7 @@ import 'dotenv/config';
 export default {
   name: 'SUEP',
   icon: './assets/suep_icon.png',
-  version: process.env.MY_CUSTOM_PROJECT_VERSION || '1.1.6',
+  version: '1.1.6',
   orientation: 'portrait',
   splash: {
     image: './assets/splash.png',
