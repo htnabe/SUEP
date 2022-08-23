@@ -5,6 +5,7 @@ export default {
   icon: './assets/suep_icon.png',
   version: '1.1.6',
   orientation: 'portrait',
+  jsEngine: 'hermes',
   splash: {
     image: './assets/splash.png',
     resizeMode: 'contain',
