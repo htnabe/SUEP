@@ -43,5 +43,8 @@ export default {
     clubsSheetId: process.env.CLUB_SPREADSHEET_ID,
     commSheetId: process.env.COMMUNITY_SPREADSHEET_ID,
     univSheetId: process.env.UNIVERSITY_SPREADSHEET_ID,
+    eas: {
+      projectId: '6b0e2c19-8c89-4ce4-a103-ea5e33662d64',
+    },
   },
 };
