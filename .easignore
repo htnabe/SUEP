@@ -1,0 +1,21 @@
+# .env should not be included in this file because if .env is ignored,
+# it will be impossible to load environment variables.
+# Items to ignore by default
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Items to be created by Development build
+android/
+index.js
+metro.config.js
+
+# macOS
+.DS_Store
