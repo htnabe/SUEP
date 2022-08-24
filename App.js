@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { FontAwesome5 } from '@expo/vector-icons';
 import * as Sentry from 'sentry-expo';
-import 'dotenv/config';
+import Constants from 'expo-constants';
 
 // 外部関数のインポート
 import About from './screens/otherScreens/About';
@@ -13,7 +13,7 @@ import LectureApp from './screens/lectureScreens/LectureApp';
 import BottomTabNavigator from './screens/main/BottomTabNavigator';
 
 Sentry.init({
-  dsn: process.env.SENTRY_DNS,
+  dsn: Constants.manifest.extra.sentryDNS,
   enableInExpoDevelopment: false, // If 'true', all your dev/local errors will be reported to Sentry
   debug: false, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
 });

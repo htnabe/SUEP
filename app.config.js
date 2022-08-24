@@ -18,7 +18,7 @@ export default {
   },
   android: {
     package: 'com.tpot.suepapp',
-    versionCode: 17,
+    versionCode: 16,
     permissions: [],
     adaptiveIcon: {
       foregroundImage: './assets/suep_icon.png',
@@ -39,6 +39,11 @@ export default {
     ],
   },
   extra: {
+    sentryDNS: process.env.SENTRY_DNS,
+    googleKey: process.env.GOOGLE_SPREADSHEET_API_KEY,
+    clubsSheetId: process.env.CLUB_SPREADSHEET_ID,
+    commSheetId: process.env.COMMUNITY_SPREADSHEET_ID,
+    univSheetId: process.env.UNIVERSITY_SPREADSHEET_ID,
     eas: {
       projectId: '6b0e2c19-8c89-4ce4-a103-ea5e33662d64',
     },
