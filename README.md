@@ -1,3 +1,8 @@
+[![CodeQL](https://github.com/htnabe/SUEP/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/htnabe/SUEP/actions/workflows/codeql-analysis.yml)
+<img src="https://img.shields.io/badge/Javascript-276DC3.svg?logo=javascript&style=flat">
+<img src="https://img.shields.io/badge/-React Native-555.svg?logo=react&style=flat">
+<img src="https://img.shields.io/badge/-Expo-333.svg?logo=expo&style=flat">
+
 ## SUEP：島根大学生に関わるイベント情報などを表示するAndroidアプリ
 
 公式サイトは[こちら](https://suep.netlify.app/)
@@ -19,7 +24,7 @@
 - 各団体の年度ごとの実績をイベント情報のツイートから抜粋・表示
 
 ### ライセンス
-© 2021 Hiroshi TANABE<br>
+© 2022 Hiroshi TANABE<br>
 特定のライセンスには基づきませんが、以下の事項に従って下さい。
 - 意図的/偶発的に関わらず、APIキーを悪用しサーバーへ負荷をかける行為
 - 商用利用を禁止
@@ -28,7 +33,6 @@
 ### コントリビュート
 このレポジトリでは、下記3つのブランチで管理しています。
 - `main`: 本番環境
-- `develop`: 開発環境
-- `release`: リリース調整用の環境
+- `feature/xxxx-yyyy`: 機能開発、バグの修正 etc.
 
 開発について気になる方は[開発規則](https://suep.netlify.app/post/regulationofcontribution/)と[開発ブログ](https://suep.netlify.app/post/regulationofcontribution/)を読んでみてください。
