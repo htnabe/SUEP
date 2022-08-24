@@ -1,3 +1,8 @@
+[![CodeQL](https://github.com/htnabe/SUEP/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/htnabe/SUEP/actions/workflows/codeql-analysis.yml)
+<img src="https://img.shields.io/badge/Javascript-276DC3.svg?logo=javascript&style=flat">
+<img src="https://img.shields.io/badge/-React Native-555.svg?logo=react&style=flat">
+<img src="https://img.shields.io/badge/-Expo-333.svg?logo=expo&style=flat">
+
 ## SUEP：島根大学生に関わるイベント情報などを表示するAndroidアプリ
 
 公式サイトは[こちら](https://suep.netlify.app/)
