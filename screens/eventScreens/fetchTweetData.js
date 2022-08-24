@@ -1,5 +1,5 @@
-import Constants from 'expo-constants';
 import * as Sentry from 'sentry-expo';
+import 'dotenv/config';
 
 const fetchTweetData = async (sheetName) => {
   try {
@@ -7,29 +7,29 @@ const fetchTweetData = async (sheetName) => {
     if (sheetName == 'Clubs') {
       data = await fetch(
         'https://sheets.googleapis.com/v4/spreadsheets/' +
-          Constants.manifest.extra.clubsSheetId +
+          process.env.CLUB_SPREADSHEET_ID +
           '/values/' +
           sheetName +
           '?valueRenderOption=FORMATTED_VALUE&fields=values&key=' +
-          Constants.manifest.extra.googleKey
+          process.env.GOOGLE_SPREADSHEET_API_KEY
       );
     } else if (sheetName == 'Community') {
       data = await fetch(
         'https://sheets.googleapis.com/v4/spreadsheets/' +
-          Constants.manifest.extra.commSheetId +
+          process.env.COMMUNITY_SPREADSHEET_ID +
           '/values/' +
           sheetName +
           '?valueRenderOption=FORMATTED_VALUE&fields=values&key=' +
-          Constants.manifest.extra.googleKey
+          process.env.GOOGLE_SPREADSHEET_API_KEY
       );
     } else {
       data = await fetch(
         'https://sheets.googleapis.com/v4/spreadsheets/' +
-          Constants.manifest.extra.univSheetId +
+          process.env.UNIVERSITY_SPREADSHEET_ID +
           '/values/' +
           sheetName +
           '?valueRenderOption=FORMATTED_VALUE&fields=values&key=' +
-          Constants.manifest.extra.googleKey
+          process.env.GOOGLE_SPREADSHEET_API_KEY
       );
     }
     let { values } = await data.json();
