@@ -39,6 +39,7 @@ export default {
     ],
   },
   extra: {
+    sentryDNS: process.env.SENTRY_DNS,
     googleKey: process.env.GOOGLE_SPREADSHEET_API_KEY,
     clubsSheetId: process.env.CLUB_SPREADSHEET_ID,
     commSheetId: process.env.COMMUNITY_SPREADSHEET_ID,
