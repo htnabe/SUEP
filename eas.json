@@ -1,3 +1,4 @@
+// update channel number everytime the app version increases
 {
   "cli": {
     "version": ">= 0.59.0"

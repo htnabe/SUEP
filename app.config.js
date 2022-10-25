@@ -1,3 +1,4 @@
+// update versionCode everytime the app is updated
 import 'dotenv/config';
 
 export default {
@@ -18,7 +19,7 @@ export default {
   },
   android: {
     package: 'com.tpot.suepapp',
-    versionCode: 17,
+    versionCode: 18,
     permissions: [],
     adaptiveIcon: {
       foregroundImage: './assets/suep_icon.png',
