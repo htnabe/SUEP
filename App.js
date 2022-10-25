@@ -4,6 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { FontAwesome5 } from '@expo/vector-icons';
 import * as Sentry from 'sentry-expo';
 import Constants from 'expo-constants';
+import { StatusBar } from 'expo-status-bar';
 
 // 外部関数のインポート
 import About from './screens/otherScreens/About';
@@ -23,63 +24,64 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <>
-        <NavigationContainer>
-          <Drawer.Navigator>
-            <Drawer.Screen
-              name="時間割ホーム"
-              component={LectureApp}
-              options={{
-                headerShown: false,
-              }}
-            />
-            <Drawer.Screen
-              name="イベント情報"
-              component={BottomTabNavigator}
-              options={{
-                headerShown: false,
-              }}
-            />
-            <Drawer.Screen
-              name="利用規約"
-              component={TermsOfService}
-              options={({ navigation }) => ({
-                headerLeft: () => (
-                  <FontAwesome5
-                    name="bars"
-                    size={24}
-                    onPress={() => {
-                      navigation.openDrawer();
-                    }}
-                    style={{ paddingLeft: 20, color: '#1DA1F2' }}
-                  />
-                ),
-              })}
-            />
-            <Drawer.Screen
-              name="プライバシーポリシー"
-              component={PrivacyPolicy}
-              options={({ navigation }) => ({
-                headerLeft: () => (
-                  <FontAwesome5
-                    name="bars"
-                    size={24}
-                    onPress={() => {
-                      navigation.openDrawer();
-                    }}
-                    style={{ paddingLeft: 20, color: '#1DA1F2' }}
-                  />
-                ),
-              })}
-            />
-            <Drawer.Screen
-              name="このアプリについて"
-              component={About}
-              options={{
-                headerShown: false,
-              }}
-            />
-          </Drawer.Navigator>
-        </NavigationContainer>
+      <StatusBar style="auto" animated={true} />
+      <NavigationContainer>
+        <Drawer.Navigator>
+          <Drawer.Screen
+            name="時間割ホーム"
+            component={LectureApp}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Drawer.Screen
+            name="イベント情報"
+            component={BottomTabNavigator}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Drawer.Screen
+            name="利用規約"
+            component={TermsOfService}
+            options={({ navigation }) => ({
+              headerLeft: () => (
+                <FontAwesome5
+                  name="bars"
+                  size={24}
+                  onPress={() => {
+                    navigation.openDrawer();
+                  }}
+                  style={{ paddingLeft: 20, color: '#1DA1F2' }}
+                />
+              ),
+            })}
+          />
+          <Drawer.Screen
+            name="プライバシーポリシー"
+            component={PrivacyPolicy}
+            options={({ navigation }) => ({
+              headerLeft: () => (
+                <FontAwesome5
+                  name="bars"
+                  size={24}
+                  onPress={() => {
+                    navigation.openDrawer();
+                  }}
+                  style={{ paddingLeft: 20, color: '#1DA1F2' }}
+                />
+              ),
+            })}
+          />
+          <Drawer.Screen
+            name="このアプリについて"
+            component={About}
+            options={{
+              headerShown: false,
+            }}
+          />
+        </Drawer.Navigator>
+      </NavigationContainer>
     </>
   );
 }
