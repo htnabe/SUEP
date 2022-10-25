@@ -1,4 +1,5 @@
 import License from './License';
+import Inquiry from './Inquiry';
 import * as React from 'react';
 import {
   Text,
@@ -29,7 +30,7 @@ function AboutPage({ navigation }) {
       {/* お問い合わせ */}
       <View style={styles.contentWrapper}>
         <TouchableOpacity
-          onPress={() => openUrl('https://suep.netlify.app/')}
+          onPress={() => navigation.navigate('お問い合わせ')}
           style={styles.iconTitleRow}
         >
           <MaterialCommunityIcons
@@ -122,6 +123,7 @@ export default function About() {
         })}
       />
       <Stack.Screen name="Third-party software notices" component={License} />
+      <Stack.Screen name="お問い合わせ" component={Inquiry} />
     </Stack.Navigator>
   );
 }
