@@ -24,7 +24,7 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <>
-      <StatusBar style="auto" animated={true} />
+      <StatusBar style="auto" animated={true} backgroundColor="#FFA595" />
       <NavigationContainer>
         <Drawer.Navigator>
           <Drawer.Screen
