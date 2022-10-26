@@ -19,7 +19,7 @@ export default {
   },
   android: {
     package: 'com.tpot.suepapp',
-    versionCode: 19,
+    versionCode: 20,
     permissions: [],
     adaptiveIcon: {
       foregroundImage: './assets/suep_icon.png',
