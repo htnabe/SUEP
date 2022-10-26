@@ -6,7 +6,7 @@ export default function TermsOfService() {
   return (
     <WebView
       style={[commonStyles.viewPageContainer, commonStyles.centeredView]}
-      source={{ uri: 'https://suep.netlify.app/post/plivacypolicy/' }}
+      source={{ uri: 'https://suep.netlify.app/post/terms/' }}
     />
   );
 }
