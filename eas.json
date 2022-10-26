@@ -10,17 +10,17 @@
       "android": {
         "buildType": "apk"
       },
-      "releaseChannel": "dev-x.xx.x"
+      "releaseChannel": "dev-1.1.6.18"
     },
     "preview": {
       "distribution": "internal",
       "android": {
         "buildType": "apk"
       },
-      "releaseChannel": "prev-1.16"
+      "releaseChannel": "prev-1.1.6.18"
     },
     "production": {
-      "releaseChannel": "prod-1.16"
+      "releaseChannel": "prod-1.1.6.18"
     }
   },
   "submit": {
