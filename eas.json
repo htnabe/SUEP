@@ -20,7 +20,7 @@
       "releaseChannel": "prev-1.1.6.18"
     },
     "production": {
-      "releaseChannel": "prod-1.1.6.20"
+      "releaseChannel": "prod-1.1.6.21"
     }
   },
   "submit": {
