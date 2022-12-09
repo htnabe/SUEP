@@ -1,3 +1,5 @@
+# このアプリケーションの開発・運用は既に終了しました。
+
 [![CodeQL](https://github.com/htnabe/SUEP/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/htnabe/SUEP/actions/workflows/codeql-analysis.yml)
 <img src="https://img.shields.io/badge/Javascript-276DC3.svg?logo=javascript&style=flat">
 <img src="https://img.shields.io/badge/-React Native-555.svg?logo=react&style=flat">
